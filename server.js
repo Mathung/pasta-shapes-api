@@ -18,7 +18,7 @@ MongoClient.connect(uri, { useUnifiedTopology: true })
     const db = client.db('pasta');
     const pastaCollection = db.collection('pasta-shapes');
 
-    app.get('/', (req, res) => {
+    app.get('/index', (req, res) => {
         res.sendFile(__dirname + '/index.html')
     })
 
@@ -49,7 +49,7 @@ MongoClient.connect(uri, { useUnifiedTopology: true })
     })
 
     app.get('*', function(req, res){
-        res.status(404).send('huh?');
+        res.status(404).send('you may be looking for /index');
       });
 
     app.listen(process.env.PORT || PORT, () => {
