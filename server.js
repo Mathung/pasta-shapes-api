@@ -3,7 +3,7 @@ const app = express();
 const PORT = 8000;
 const cors = require('cors');
 const MongoClient = require('mongodb').MongoClient;
-const uri = 'mongodb+srv://Matthung:EINZm8oa26LRSVSl@cluster0.t7zaa.mongodb.net/?retryWrites=true&w=majority';
+const uri = '';
 
 app.use(express.static("public"));
 app.use(cors());
@@ -58,4 +58,3 @@ MongoClient.connect(uri, { useUnifiedTopology: true })
 })
 
 
-//pw EINZm8oa26LRSVSl
