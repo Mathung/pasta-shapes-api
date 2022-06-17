@@ -18,7 +18,7 @@ MongoClient.connect(uri, { useUnifiedTopology: true })
     const db = client.db('pasta');
     const pastaCollection = db.collection('pasta-shapes');
 
-    app.get('/index', (req, res) => {
+    app.get('/', (req, res) => {
         res.sendFile(__dirname + '/index.html')
     })
 
@@ -47,6 +47,10 @@ MongoClient.connect(uri, { useUnifiedTopology: true })
             })
         res.redirect('/add'); //reload the page after submit
     })
+
+    app.get('*', function(req, res){
+        res.status(404).send('huh?');
+      });
 
     app.listen(process.env.PORT || PORT, () => {
         console.log('server is running')
