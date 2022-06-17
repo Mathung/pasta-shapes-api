@@ -1,0 +1,13 @@
+.pastaForm {
+    display:block;
+    margin-bottom: 10px;
+}
+
+#pastaPic {
+    max-width: 300px;
+}
+
+#pastaDescription {
+    font-size: 14px;
+    font-weight: normal;
+}
