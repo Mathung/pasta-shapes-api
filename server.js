@@ -17,7 +17,7 @@ MongoClient.connect('mongodb+srv://Matthung:EINZm8oa26LRSVSl@cluster0.t7zaa.mong
     const db = client.db('pasta');
     const pastaCollection = db.collection('pasta-shapes');
 
-    app.get('/', (req, res) => {
+    app.get('/index', (req, res) => {
         res.sendFile(__dirname + '/index.html')
     })
 
