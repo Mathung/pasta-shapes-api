@@ -5,6 +5,10 @@ async function getPasta() {
     const data = await res.json()
     let i = Math.floor(Math.random()*data.length)
 
+    while (document.querySelector('#pastaName').innerHTML == data[i].name) {
+        i = Math.floor(Math.random()*data.length);
+    }
+
     document.querySelector('#pastaName').innerHTML = data[i].name;
     document.querySelector('#pastaPic').src = data[i].image
     document.querySelector('#pastaType').innerHTML = data[i].type
